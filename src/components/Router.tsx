@@ -3,7 +3,7 @@ import HomePage from "../pages/home";
 import ResumePage from "../pages/resume";
 import BlogPage from "../pages/blog";
 
-function Router() {
+export default function Router() {
   return (
     <Routes>
       <Route index element={<HomePage />} />
@@ -12,5 +12,3 @@ function Router() {
     </Routes>
   );
 }
-
-export default Router;

@@ -1,3 +1,4 @@
+import * as React from "react";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -6,7 +7,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import { Link } from "react-router";
 
-function NavSidebar() {
+const NavSidebar: React.FC = () => {
   const pages = ["Home", "Resume", "Blog"];
 
   return (
@@ -27,6 +28,6 @@ function NavSidebar() {
       </List>
     </div>
   );
-}
+};
 
 export default NavSidebar;

@@ -1,8 +1,9 @@
+import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useTitle } from "../../context/TitleProvider";
 
-function BlogPage() {
+const BlogPage: React.FC = () => {
   const { setTitle } = useTitle();
   setTitle("Blog");
   return (
@@ -12,6 +13,6 @@ function BlogPage() {
       </Typography>
     </Box>
   );
-}
+};
 
 export default BlogPage;

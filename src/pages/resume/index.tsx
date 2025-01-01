@@ -1,8 +1,9 @@
+import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useTitle } from "../../context/TitleProvider";
 
-function ResumePage() {
+const ResumePage: React.FC = () => {
   const { setTitle } = useTitle();
   setTitle("Resume");
   return (
@@ -12,6 +13,6 @@ function ResumePage() {
       </Typography>
     </Box>
   );
-}
+};
 
 export default ResumePage;

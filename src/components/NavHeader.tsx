@@ -17,7 +17,7 @@ import NavSidebar from "./NavSidebar";
 const MODES: ("system" | "light" | "dark")[] = ["system", "light", "dark"];
 const DRAWER_WIDTH = 240;
 
-function NavHeader() {
+const NavHeader: React.FC = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
 
@@ -40,12 +40,12 @@ function NavHeader() {
     null
   );
 
+  const { title } = useTitle();
+
   const { mode, setMode } = useColorScheme();
   if (!mode) {
     return null;
   }
-
-  const { title } = useTitle();
 
   const handleOpenModeMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElMode(event.currentTarget);
@@ -150,6 +150,6 @@ function NavHeader() {
       </Box>
     </Box>
   );
-}
+};
 
 export default NavHeader;

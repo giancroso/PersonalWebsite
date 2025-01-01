@@ -1,7 +1,8 @@
+import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
-function Copyright() {
+const Copyright: React.FC = () => {
   return (
     <Typography
       variant="body2"
@@ -17,6 +18,6 @@ function Copyright() {
       {new Date().getFullYear()}.
     </Typography>
   );
-}
+};
 
 export default Copyright;
