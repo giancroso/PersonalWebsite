@@ -17,7 +17,7 @@ import NavSidebar from "./NavSidebar";
 const MODES: ("system" | "light" | "dark")[] = ["system", "light", "dark"];
 const DRAWER_WIDTH = 240;
 
-const NavHeader: React.FC = () => {
+const NavWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
 
@@ -148,8 +148,19 @@ const NavHeader: React.FC = () => {
           <NavSidebar />
         </Drawer>
       </Box>
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          width: { sm: `calc(100% - ${DRAWER_WIDTH}px)` },
+        }}
+      >
+        <Toolbar />
+        {children}
+      </Box>
     </Box>
   );
 };
 
-export default NavHeader;
+export default NavWrapper;

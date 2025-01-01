@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
       <Typography align="center" variant="h4" component="h2" sx={{ mb: 2 }}>
         Gianluca Croso's Personal Website
       </Typography>
-      <Typography align="justify" variant="body1" sx={{ mb: 2 }}>
+      <Typography align="center" variant="body1" sx={{ mb: 2 }}>
         Experimentation, coding playground, hosting for personal projects, etc.
       </Typography>
     </Box>
