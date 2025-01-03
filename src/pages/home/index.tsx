@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
   React.useEffect(() => setTitle("Home"), [setTitle]);
   return (
     <Box sx={{ my: 4 }}>
-      <Typography align="center" variant="h4" component="h2" sx={{ mb: 2 }}>
+      <Typography align="center" variant="h4" sx={{ mb: 2 }}>
         Gianluca Croso's Personal Website
       </Typography>
       <Typography align="center" variant="body1" sx={{ mb: 2 }}>

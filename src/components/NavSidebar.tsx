@@ -11,7 +11,7 @@ const NavSidebar: React.FC = () => {
   const pages = [
     { name: "Home", path: "/" },
     { name: "About Me", path: "/about" },
-    { name: "Blog", path: "/blog" },
+    { name: "Travel Blog", path: "/travel" },
   ];
 
   return (
