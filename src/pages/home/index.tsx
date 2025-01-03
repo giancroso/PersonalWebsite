@@ -5,7 +5,7 @@ import { useTitle } from "../../context/TitleProvider";
 
 const HomePage: React.FC = () => {
   const { setTitle } = useTitle();
-  setTitle("Home");
+  React.useEffect(() => setTitle("Home"), [setTitle]);
   return (
     <Box sx={{ my: 4 }}>
       <Typography align="center" variant="h4" component="h2" sx={{ mb: 2 }}>

@@ -8,7 +8,11 @@ import Toolbar from "@mui/material/Toolbar";
 import { Link } from "react-router";
 
 const NavSidebar: React.FC = () => {
-  const pages = ["Home", "Resume", "Blog"];
+  const pages = [
+    { name: "Home", path: "/" },
+    { name: "About Me", path: "/about" },
+    { name: "Blog", path: "/blog" },
+  ];
 
   return (
     <div>
@@ -16,12 +20,9 @@ const NavSidebar: React.FC = () => {
       <Divider />
       <List>
         {pages.map((page) => (
-          <ListItem key={page} disablePadding>
-            <ListItemButton
-              component={Link}
-              to={`/${page !== "Home" ? page : ""}`}
-            >
-              <ListItemText primary={page} />
+          <ListItem key={page.name} disablePadding>
+            <ListItemButton component={Link} to={page.path}>
+              <ListItemText primary={page.name} />
             </ListItemButton>
           </ListItem>
         ))}

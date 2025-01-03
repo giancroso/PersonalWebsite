@@ -1,5 +1,10 @@
 {
   "extends": [
-    "react-app"
-  ]
+    "react-app",
+    "plugin:mdx/recommended"
+  ],
+  "settings": {
+    "mdx/code-blocks": true,
+    "mdx/language-mapper": {}
+  }
 }
